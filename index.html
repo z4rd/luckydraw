@@ -1,0 +1,705 @@
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  @font-face {
+    font-family: 'Museo Sans';
+    src: url(assets/fonts/museosans_300-webfont.eot);
+    src: url(assets/fonts/museosans_300-webfont.eot?#iefix) format("embedded-opentype"), url(assets/fonts/museosans_300-webfont.woff) format("woff"), url(assets/fonts/avenirltstd-light.ttf) format("truetype"), url(assets/fonts/museosans_300-webfont.svg#Nobel) format("svg");
+    font-weight: 300
+  }
+  
+  @font-face {
+    font-family: 'Museo Sans';
+    src: url(assets/fonts/museosans_500-webfont.eot);
+    src: url(assets/fonts/museosans_500-webfont.eot?#iefix) format("embedded-opentype"), url(assets/fonts/museosans_500-webfont.woff) format("woff"), url(assets/fonts/museosans_500-webfont.ttf) format("truetype"), url(assets/fonts/museosans_500-webfont.svg#Avenirltstd) format("svg");
+    font-weight: 500
+  }
+  
+  @font-face {
+    font-family: 'Museo Sans';
+    src: url(assets/fonts/museosans_700-webfont.eot);
+    src: url(assets/fonts/museosans_700-webfont.eot?#iefix) format("embedded-opentype"), url(assets/fonts/museosans_700-webfont.woff) format("woff"), url(assets/fonts/museosans_300-webfont.ttf) format("truetype"), url(assets/fonts/museosans_300-webfont.svg#Nobel) format("svg");
+    font-weight: 700
+  }
+  
+  @font-face {
+    font-family: icons;
+    src: url(assets/fonts/icons.eot);
+    src: url(assets/fonts/icons.eot?#iefix) format("embedded-opentype"), url(assets/fonts/icons.woff) format("woff"), url(assets/fonts/icons.ttf) format("truetype"), url(assets/fonts/icons.svg#Icons) format("svg");
+    font-weight: 400;
+    font-style: normal
+  }
+  
+  body {
+    font-family: 'Museo Sans', sans-serif;
+    font-size: 15px;
+    color: #000;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    background: linear-gradient(90deg, rgb(205, 232, 248), rgb(205, 248, 239));
+    background: -webkit-linear-gradient(90deg, rgb(205, 232, 248), rgb(205, 248, 239));
+  }
+  
+  #container {
+    text-align: center;
+  }
+  .logo {
+    width: 80px;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+  }
+
+  #container > div {
+    z-index: 1;
+    border-radius: 0px;
+    box-shadow: 0 0 20px rgba(10, 51, 57, 0.05);
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 600px;
+    height: 600px;
+    margin-left: -300px;
+    margin-top: -300px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  h1,
+  h2,
+  h3 {
+    font-family: 'Museo Sans', sans-serif;
+    margin: 0;
+    padding: 0 0 5px 0;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+  
+  h1 {
+    font-size: 48px;
+    padding: 10px 0;
+    font-weight: 700;
+  }
+  
+  h2 {
+    font-size: 16px;
+  }
+  
+  h3 {
+    font-size: 14px;
+  }
+  
+  textarea {
+    border: 1px solid #7BDAE8;
+    background-color: #fff;
+    margin: 10px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    resize: none;
+    outline: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 36px;
+    padding: 15px;
+    text-align: center;
+    color: #000;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'Museo Sans', sans-serif;
+    width: 300px;
+  }
+  
+  input[type="button"],
+  input[type="reset"] {
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    font-family: 'Museo Sans', sans-serif;
+    border: none;
+    outline: none;
+    background-color: #188ae2;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 20px;
+    margin: 0 8px;
+    font-weight: 500;
+  }
+  
+  input[type="button"]:hover,
+  input[type="reset"]:hover {
+    webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    opacity: 0.8;
+  }
+
+  input[type="button"]:active,
+  input[type="reset"]:active {
+    opacity: 1;
+  }
+
+  p input[type="button"] {
+    font-size: 18px;
+  }
+  
+  p input[type="button"]:nth-child(1) {
+    background: #F79A3E;
+    color: #fff;
+  }
+  .btn1:hover {
+    background: #DA3B22;
+  }
+  
+  p input[type="button"]:nth-child(2) {
+    background: #EB6651
+  }
+  
+  p input[type="button"]:nth-child(3) {
+    background: #37B8AF
+  }
+
+  div.clear input[type="button"] {
+    color: #03363D;
+  }
+  
+  div.clear input[type="button"]:nth-child(1) {
+    background: none;
+  }
+  
+  div.clear input[type="button"]:nth-child(2) {
+    background: none;
+    color: #30AABC;
+  }
+  
+  #wrapNr {
+    box-sizing: border-box;
+    padding: 30px;
+    display: inline-block;
+    width: 100%;
+    font-size: 120px;
+    font-weight: 700;
+    font-family: 'Museo Sans', sans-serif;
+  }
+  /*snow*/
+  /*.AlgaeQuartCircle {
+    background: url('assets/img/Relationshapes_AlgaeQuartCircle.svg');
+  }
+  
+  .AlgaeSemiCircle {
+    background: url('assets/img/Relationshapes_AlgaeSemiCircle.svg');
+  }
+  
+  .AlgaeSquare1 {
+    background: url('assets/img/Relationshapes_AlgaeSquare1.svg');
+  }
+  
+  .AlgaeSquare2 {
+    background: url('assets/img/Relationshapes_AlgaeSquare2.svg');
+  }
+  
+  .ChatRectangle {
+    background: url('assets/img/Relationshapes_ChatRectangle.svg');
+  }
+  
+  .ChatTriangle {
+    background: url('assets/img/Relationshapes_ChatTriangle.svg');
+  }
+  
+  .ConnectRectange {
+    background: url('assets/img/Relationshapes_ConnectRectange.svg');
+  }
+  
+  .ConnectTriangle {
+    background: url('assets/img/Relationshapes_ConnectTriangle.svg');
+  }
+  
+  .ExploreQuartCircle {
+    background: url('assets/img/Relationshapes_ExploreQuartCircle.svg');
+  }
+  
+  .ExploreSemiCircle {
+    background: url('assets/img/Relationshapes_ExploreSemiCircle.svg');
+  }
+  
+  .ExploreSquare1 {
+    background: url('assets/img/Relationshapes_ExploreSquare1.svg');
+  }
+  
+  .ExploreSquare2 {
+    background: url('assets/img/Relationshapes_ExploreSquare2.svg');
+  }
+  
+  .MessageSquare {
+    background: url('assets/img/Relationshapes_MessageSquare.svg');
+  }
+  
+  .MessageTriangle {
+    background: url('assets/img/Relationshapes_MessageTriangle.svg');
+  }
+  
+  .SupportSemiCircle {
+    background: url('assets/img/Relationshapes_SupportSemiCircle.svg');
+  }
+  
+  .SupportTriangle {
+    background: url('assets/img/Relationshapes_SupportTriangle.svg');
+  }
+  
+  .TalkCircle {
+    background: url('assets/img/Relationshapes_TalkCircle.svg');
+  }
+  
+  .TalkQuartCircle {
+    background: url('assets/img/Relationshapes_TalkQuartCircle.svg');
+  }
+  
+  .TalkTriangle {
+    background: url('assets/img/Relationshapes_TalkTriangle.svg');
+  }*/
+  
+  #snow {
+    position: relative;
+    top: -50px;
+    width: 100%;
+    text-align: right;
+  }
+  
+  #snow i {
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+    /*    background: linear-gradient(to bottom right, #309900, #005600);*/
+    transform: skew(20deg);
+    /*    border-radius: 5% 40% 70%;
+    box-shadow: inset 0px 0px 1px #222;
+    border: 1px solid #333;*/
+    z-index: 1;
+    -webkit-animation: falling 5s 0s infinite;
+    background: url('assets/img/Relationshapes_AlgaeQuartCircle.svg');
+  }
+  
+  #snow i:nth-of-type(2n) {
+    -webkit-animation: falling2 5s 0s infinite;
+  }
+  
+  #snow i:nth-of-type(3n) {
+    -webkit-animation: falling3 5s 0s infinite;
+  }
+  
+  #snow i:before {
+    position: absolute;
+    content: '';
+    top: 117px;
+    right: 9px;
+    height: 27px;
+    width: 32px;
+    transform: rotate(49deg);
+    z-index: 1;
+  }
+  
+  #snow i:after {
+    content: '';
+    height: 125px;
+    width: 10px;
+    /*  background: linear-gradient(to right, rgba(0,0,0,.15), rgba(0,0,0,0));*/
+    display: block;
+    transform: rotate(125deg);
+    position: absolute;
+    left: 85px;
+    border-radius: 50%;
+  }
+  
+  #snow i:nth-of-type(n) {
+    height: 23px;
+    width: 30px;
+  }
+  
+  #snow i:nth-of-type(n):before {
+    width: 7px;
+    height: 5px;
+    top: 17px;
+    right: 1px;
+  }
+  
+  #snow i:nth-of-type(n):after {
+    width: 2px;
+    height: 17px;
+    left: 12px;
+    top: 0px;
+  }
+  
+  #snow i:nth-of-type(2n+1) {
+    height: 11px;
+    width: 16px;
+  }
+  
+  #snow i:nth-of-type(2n+1):before {
+    width: 4px;
+    height: 3px;
+    top: 7px;
+    right: 0px;
+  }
+  
+  #snow i:nth-of-type(2n+1):after {
+    width: 2px;
+    height: 6px;
+    left: 5px;
+    top: 1px;
+  }
+  
+  #snow i:nth-of-type(3n+2) {
+    height: 17px;
+    width: 23px;
+  }
+  
+  #snow i:nth-of-type(3n+2):before {
+    height: 4px;
+    width: 4px;
+    top: 12px;
+    right: 1px;
+  }
+  
+  #snow i:nth-of-type(3n+2):after {
+    height: 10px;
+    width: 2px;
+    top: 1px;
+    left: 8px;
+  }
+  
+  #snow i:nth-of-type(n) {
+    -webkit-animation-delay: 1.9s;
+  }
+  
+  #snow i:nth-of-type(2n) {
+    -webkit-animation-delay: 3.9s;
+  }
+  
+  #snow i:nth-of-type(3n) {
+    -webkit-animation-delay: 2.3s;
+  }
+  
+  #snow i:nth-of-type(4n) {
+    -webkit-animation-delay: 4.4s;
+  }
+  
+  #snow i:nth-of-type(5n) {
+    -webkit-animation-delay: 5s;
+  }
+  
+  #snow i:nth-of-type(6n) {
+    -webkit-animation-delay: 3.5s;
+  }
+  
+  #snow i:nth-of-type(7n) {
+    -webkit-animation-delay: 2.8s;
+  }
+  
+  #snow i:nth-of-type(8n) {
+    -webkit-animation-delay: 1.5s;
+  }
+  
+  #snow i:nth-of-type(9n) {
+    -webkit-animation-delay: 3.3s;
+  }
+  
+  #snow i:nth-of-type(10n) {
+    -webkit-animation-delay: 2.5s;
+  }
+  
+  #snow i:nth-of-type(11n) {
+    -webkit-animation-delay: 1.2s;
+  }
+  
+  #snow i:nth-of-type(12n) {
+    -webkit-animation-delay: 4.1s;
+  }
+  
+  #snow i:nth-of-type(13n) {
+    -webkit-animation-delay: 1s;
+  }
+  
+  #snow i:nth-of-type(14n) {
+    -webkit-animation-delay: 4.7s;
+  }
+  
+  #snow i:nth-of-type(15n) {
+    -webkit-animation-delay: 3s;
+  }
+  
+  #snow i:nth-of-type(n) {
+    background: url('assets/img/Relationshapes_ExploreSquare1.svg');
+    background-size: 100%;
+  }
+  
+  #snow i:nth-of-type(2n+2) {
+    background: url('assets/img/Relationshapes_ConnectTriangle.svg');
+    background-size: 100%;
+  }
+  
+  #snow i:nth-of-type(3n+1) {
+    background: url('assets/img/Relationshapes_TalkCircle.svg');
+    background-size: 100%;
+  }
+
+  #snow i:nth-of-type(4n+1) {
+    background: url('assets/img/Relationshapes_AlgaeSquare1.svg');
+    background-size: 100%;
+  }
+  
+  #snow i:nth-of-type(n) {
+    opacity: 1;
+  }
+  
+  #snow i:nth-of-type(3n+1) {
+    opacity: 1;
+  }
+  
+  #snow i:nth-of-type(3n+2) {
+    opacity: 1;
+  }
+  
+  #snow i:nth-of-type(n) {
+    transform: rotate(180deg);
+  }
+  
+  #snow i:nth-of-type(n) {
+    -webkit-animation-timing-function: ease-in-out;
+  }
+  
+  @-webkit-keyframes falling {
+    0% {
+      -webkit-transform: translate3d(300, 0, 0) rotate(0deg);
+    }
+    100% {
+      -webkit-transform: translate3d(-350px, 700px, 0) rotate(90deg);
+      opacity: 0;
+    }
+  }
+  
+  @-webkit-keyframes falling3 {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0) rotate(-20deg);
+    }
+    100% {
+      -webkit-transform: translate3d(-230px, 640px, 0) rotate(-70deg);
+      opacity: 0;
+    }
+  }
+  
+  @-webkit-keyframes falling2 {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0) rotate(90deg);
+    }
+    100% {
+      -webkit-transform: translate3d(-400px, 680px, 0) rotate(0deg);
+      opacity: 0;
+    }
+  }
+  </style>
+</head>
+
+<body>
+<img src='assets/img/logo.png' class='logo' />
+  <div id="snow">
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+  </div>
+  <audio id="theme" autoplay loop>
+    <source src="assets/sounds/soundtrack.mp3" type="audio/mpeg">
+    <source src="assets/sounds/soundtrack.ogg" type="audio/ogg"> Your browser does not support this audio format.
+  </audio>
+  <div id="container">
+    <div>
+      <p style='margin-top: 0px'>
+        <input type="button" value="Start Wheeling" class='btn1' onClick="loopStart()">
+        <!--         <input type="button" value="Stop Wheeling" onClick="loopStop()"> -->
+        <input type="button" value="Pick One!" class='btn2' onClick="QuickPick()">
+        <!--         <input type="button" value="Quick Pick!" onClick="addNr()"> -->
+        <input type="button" value="Add to List" class='btn3' onClick="addNr()">
+      </p>
+      <div id="wrapPicks">
+        <span id="wrapNr">00</span>
+      </div>
+      <h2> Congrats! </h2>
+      <textarea id="myPicks" name="myPicks" rows="3"></textarea>
+      <div class='clear' style='margin: 20px 0;'>
+        <input type="button" value="Copy All" onClick="copyQP()">
+        <input type="button" value="Clear All" onClick="resetNrs()">
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/jquery.min.js"></script>
+  <script>
+  var lotto_nrs_drawn = 1; // numbers to be drawn...
+  var lotto_pool = 150; // ...from a pool of
+  var repeat_num = 0; // allow repeating numbers per combination (0 = no; 1 = yes;)
+
+  var lotto_nrs_special = 0; //special ball scope 1 to x; 0 if none
+  var lotto_pool_special_different = 1; // 1 = yes; 0 = no; Is the special ball a separate draw?
+
+  function resetNrs() {
+    document.getElementById('wrapNr').innerHTML = '000';
+    document.getElementById('myPicks').value = '';
+    loopStop();
+  }
+
+
+  var specialNr = '';
+  var qps = new Array(lotto_nrs_drawn);
+  var loop_x = 0;
+
+  function wheelNrs() {
+    qps = [];
+    var i;
+    var x = -1;
+
+    for (i = 0; i < lotto_nrs_drawn; i++) {
+      do {
+        qp_nr = rand(lotto_pool);
+        qp_nr = padNrs(qp_nr, 2);
+
+        if (repeat_num == 0) {
+          x = qps.join().indexOf(qp_nr);
+        }
+      } while (x != -1);
+
+      qps[i] = qp_nr;
+    }
+
+    if (lotto_nrs_special != 0) {
+      pickSpecial();
+      spinSpecial(specialNr);
+    }
+
+    spinNr(qps.join('-'));
+  }
+
+  function pickSpecial() {
+    if (lotto_pool_special_different == 0) {
+      var x = -1;
+
+      do {
+        var qp_special = padNrs(rand(lotto_nrs_special), 2);
+        x = qps.join().indexOf(qp_special);
+      } while (x != -1);
+    } else {
+      var qp_special = padNrs(rand(lotto_nrs_special), 2);
+    }
+
+    specialNr = ' + ' + qp_special;
+  }
+
+
+  function loopStart() {
+    loop_x = 0;
+    loopDo();
+  }
+
+  function loopDo() {
+    if (loop_x == 0) {
+      wheelNrs()
+      window.setTimeout('loopDo()', 100);
+    }
+  }
+
+  function loopStop() {
+    loop_x = 1;
+  }
+
+  function QuickPick() {
+    loop_x = 1;
+    wheelNrs();
+  }
+
+  function addNr() {
+    var myPicksEl = document.getElementById('myPicks');
+    var myPicksVal = document.getElementById('myPicks').value;
+
+    var newLine = '\n'; // CR and LF to append
+    qps.sort(function(a, b) {
+      return a - b
+    });
+    var qp_nr = qps.join('-');
+    var specialNrPrint = '';
+
+    // if (qp_nr >= 0) { return; }
+
+    if (lotto_nrs_special != 0) {
+      var specialNrPrint = specialNr;
+      myPicksEl.value = qp_nr + specialNrPrint + myPicksVal;
+    } else {
+      myPicksEl.value = qp_nr + newLine + myPicksVal;
+    }
+  }
+
+  function padNrs(the_nr, the_length) {
+    var str = '' + the_nr;
+
+    while (str.length < the_length) {
+      str = '0' + str;
+    }
+
+    return str;
+  }
+
+  function spinNr(txtMsg) {
+    wrapNr.firstChild.data = txtMsg;
+  }
+
+  function spinSpecial(txtMsg) {
+    wrapSpecial.firstChild.data = txtMsg;
+  }
+
+  function copyQP(theField) {
+    var myPicksEl = document.getElementById('myPicks');
+    myPicksEl.focus();
+    myPicksEl.select();
+    therange = document.createRange();
+    document.execCommand('Copy');
+  }
+
+  function rand(n) {
+    return (Math.floor(Math.random() * n + 1));
+  }
+  </script>
+</body>
+
+</html>
