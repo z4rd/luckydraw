@@ -41,24 +41,25 @@
     color: #000;
     letter-spacing: 0.5px;
     font-weight: 500;
-    background: linear-gradient(90deg, rgb(205, 232, 248), rgb(205, 248, 239));
-    background: -webkit-linear-gradient(90deg, rgb(205, 232, 248), rgb(205, 248, 239));
+    /*    background: linear-gradient(90deg, rgb(205, 232, 248), rgb(205, 248, 239));
+    background: -webkit-linear-gradient(90deg, rgb(205, 232, 248), rgb(205, 248, 239));*/
   }
   
   #container {
     text-align: center;
   }
+  
   .logo {
-    width: 80px;
+    width: 120px;
     position: absolute;
-    bottom: 30px;
-    right: 30px;
+    top: 30px;
+    left: 30px;
   }
-
+  
   #container > div {
     z-index: 1;
     border-radius: 0px;
-    box-shadow: 0 0 20px rgba(10, 51, 57, 0.05);
+    /*    box-shadow: 0 0 20px rgba(10, 51, 57, 0.05);*/
     box-sizing: border-box;
     position: absolute;
     left: 50%;
@@ -67,7 +68,7 @@
     height: 600px;
     margin-left: -300px;
     margin-top: -300px;
-    padding: 40px;
+    padding: 55px;
     background-color: rgba(255, 255, 255, 0.7);
   }
   
@@ -96,7 +97,7 @@
   }
   
   textarea {
-    border: 1px solid #7BDAE8;
+    border: 1px solid #2300FF;
     background-color: #fff;
     margin: 10px;
     -webkit-border-radius: 3px;
@@ -142,32 +143,33 @@
     transition: all 0.3s ease-out;
     opacity: 0.8;
   }
-
+  
   input[type="button"]:active,
   input[type="reset"]:active {
     opacity: 1;
   }
-
+  
   p input[type="button"] {
     font-size: 18px;
   }
   
   p input[type="button"]:nth-child(1) {
-    background: #F79A3E;
+    background: #2300FF;
     color: #fff;
   }
+  
   .btn1:hover {
-    background: #DA3B22;
+    opacity: 0.8;
   }
   
   p input[type="button"]:nth-child(2) {
-    background: #EB6651
+    background: #EC008C;
   }
   
   p input[type="button"]:nth-child(3) {
-    background: #37B8AF
+    background: #01F1F1;
   }
-
+  
   div.clear input[type="button"] {
     color: #03363D;
   }
@@ -178,7 +180,7 @@
   
   div.clear input[type="button"]:nth-child(2) {
     background: none;
-    color: #30AABC;
+    color: #2300FF;
   }
   
   #wrapNr {
@@ -442,7 +444,7 @@
   }
   
   #snow i:nth-of-type(2n+2) {
-    background: url('assets/img/Relationshapes_ConnectTriangle.svg');
+    background: url('assets/img/Relationshapes_MessageTriangle.svg');
     background-size: 100%;
   }
   
@@ -450,7 +452,7 @@
     background: url('assets/img/Relationshapes_TalkCircle.svg');
     background-size: 100%;
   }
-
+  
   #snow i:nth-of-type(4n+1) {
     background: url('assets/img/Relationshapes_AlgaeSquare1.svg');
     background-size: 100%;
@@ -505,11 +507,30 @@
       opacity: 0;
     }
   }
+  
+  #play {
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    font-family: 'Museo Sans', sans-serif;
+    color: #2300FF;
+    border: 1px solid #2300FF;
+    outline: none;
+    background-color: rgba(255,255,255,0.7);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 6px 10px;
+    margin: 0 8px;
+    font-weight: 500;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
   </style>
 </head>
 
 <body>
-<img src='assets/img/logo.png' class='logo' />
+  <img src='assets/img/logo.png' class='logo' />
   <div id="snow">
     <i></i>
     <i></i>
@@ -542,14 +563,16 @@
     <i></i>
     <i></i>
   </div>
-  <audio id="theme" autoplay loop>
-    <source src="assets/sounds/soundtrack.mp3" type="audio/mpeg">
-    <source src="assets/sounds/soundtrack.ogg" type="audio/ogg"> Your browser does not support this audio format.
+  <audio id="myaudio" paused loop>
+    <source src="assets/sounds/soundtrack.mp3" type="audio/mpeg" id="audiofile">
   </audio>
+  <button id="play" onclick="playAudio();">
+    Music ON
+  </button>
   <div id="container">
     <div>
       <p style='margin-top: 0px'>
-        <input type="button" value="Start Wheeling" class='btn1' onClick="loopStart()">
+        <input type="button" value="Start Wheeling" class='btn1' onClick="loopStart();">
         <!--         <input type="button" value="Stop Wheeling" onClick="loopStop()"> -->
         <input type="button" value="Pick One!" class='btn2' onClick="QuickPick()">
         <!--         <input type="button" value="Quick Pick!" onClick="addNr()"> -->
@@ -698,6 +721,41 @@
 
   function rand(n) {
     return (Math.floor(Math.random() * n + 1));
+  }
+
+
+
+  //audio
+
+  var currentFile = "";
+
+  function playAudio() {
+    // Check for audio element support.
+    if (window.HTMLAudioElement) {
+      try {
+        var oAudio = document.getElementById('myaudio');
+        var btn = document.getElementById('play');
+        var audioURL = document.getElementById('audiofile');
+
+        //Skip loading if current file hasn't changed.
+        if (audioURL.src !== currentFile) {
+          oAudio.src = audioURL.src;
+          currentFile = audioURL.src;
+        }
+
+        // Tests the paused attribute and set state. 
+        if (oAudio.paused) {
+          oAudio.play();
+          btn.textContent = "Music OFF";
+        } else {
+          oAudio.pause();
+          btn.textContent = "Music ON";
+        }
+      } catch (e) {
+        // Fail silently but show in F12 developer tools console
+        if (window.console && console.error("Error:" + e));
+      }
+    }
   }
   </script>
 </body>
