@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300px" height="105px" viewBox="0 0 300 105" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Mask</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M121.0199,411.854975 C102.867995,416.531972 88.2425596,415.954966 79.9091295,410.006119 C58.5498568,394.41884 74.8607973,363.309295 80.637333,354 C70.2297502,365.341005 59.8426226,376.820167 51.7382903,389.160774 C39.0110929,408.600176 33.5454756,429.89656 42.2061881,443.590286 C57.6661941,468.291817 94.7309347,456.893923 118.389367,446.950734 L338,354.898016 L121.0199,411.854975 Z" id="path-1"></path>
+    </defs>
+    <g id="V7" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="SWOOSH-IT-2-Copy" transform="translate(-38.000000, -354.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#D09B47" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>
