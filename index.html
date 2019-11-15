@@ -61,8 +61,6 @@
     color: #000;
     letter-spacing: 0.5px;
     font-weight: 500;
-    /*    background: linear-gradient(90deg, rgb(205, 232, 248), rgb(205, 248, 239));
-    background: -webkit-linear-gradient(90deg, rgb(205, 232, 248), rgb(205, 248, 239));*/
   }
   
   #container {
@@ -70,7 +68,7 @@
   }
   
   .logo {
-    width: 120px;
+    width: 110px;
     position: absolute;
     top: 30px;
     left: 30px;
@@ -84,12 +82,11 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 600px;
-    height: 600px;
-    margin-left: -300px;
-    margin-top: -300px;
+    width: 700px;
+    height: 640px;
+    margin-left: -350px;
+    margin-top: -320px;
     padding: 55px;
-    background-color: rgba(255, 255, 255, 0.7);
   }
   
   h1,
@@ -149,8 +146,8 @@
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
-    padding: 14px 20px;
-    margin: 0 8px;
+    padding: 16px 22px;
+    margin: 0 10px;
     font-weight: 500;
   }
   
@@ -172,7 +169,7 @@
   p input[type="button"] {
     font-size: 18px;
   }
-  
+
   p input[type="button"]:nth-child(1) {
     background: #2300FF;
     color: #fff;
@@ -189,6 +186,8 @@
   p input[type="button"]:nth-child(3) {
     background: #01F1F1;
   }
+
+
   
   div.clear input[type="button"] {
     color: #03363D;
@@ -196,6 +195,7 @@
   
   div.clear input[type="button"]:nth-child(1) {
     background: none;
+    color: #000;
   }
   
   div.clear input[type="button"]:nth-child(2) {
@@ -205,89 +205,13 @@
   
   #wrapNr {
     box-sizing: border-box;
-    padding: 30px;
+    padding: 50px 30px;
     display: inline-block;
     width: 100%;
-    font-size: 120px;
+    font-size: 130px;
     font-weight: 700;
     font-family: 'Museo Sans', sans-serif;
   }
-  /*snow*/
-  /*.AlgaeQuartCircle {
-    background: url('assets/img/Relationshapes_AlgaeQuartCircle.svg');
-  }
-  
-  .AlgaeSemiCircle {
-    background: url('assets/img/Relationshapes_AlgaeSemiCircle.svg');
-  }
-  
-  .AlgaeSquare1 {
-    background: url('assets/img/Relationshapes_AlgaeSquare1.svg');
-  }
-  
-  .AlgaeSquare2 {
-    background: url('assets/img/Relationshapes_AlgaeSquare2.svg');
-  }
-  
-  .ChatRectangle {
-    background: url('assets/img/Relationshapes_ChatRectangle.svg');
-  }
-  
-  .ChatTriangle {
-    background: url('assets/img/Relationshapes_ChatTriangle.svg');
-  }
-  
-  .ConnectRectange {
-    background: url('assets/img/Relationshapes_ConnectRectange.svg');
-  }
-  
-  .ConnectTriangle {
-    background: url('assets/img/Relationshapes_ConnectTriangle.svg');
-  }
-  
-  .ExploreQuartCircle {
-    background: url('assets/img/Relationshapes_ExploreQuartCircle.svg');
-  }
-  
-  .ExploreSemiCircle {
-    background: url('assets/img/Relationshapes_ExploreSemiCircle.svg');
-  }
-  
-  .ExploreSquare1 {
-    background: url('assets/img/Relationshapes_ExploreSquare1.svg');
-  }
-  
-  .ExploreSquare2 {
-    background: url('assets/img/Relationshapes_ExploreSquare2.svg');
-  }
-  
-  .MessageSquare {
-    background: url('assets/img/Relationshapes_MessageSquare.svg');
-  }
-  
-  .MessageTriangle {
-    background: url('assets/img/Relationshapes_MessageTriangle.svg');
-  }
-  
-  .SupportSemiCircle {
-    background: url('assets/img/Relationshapes_SupportSemiCircle.svg');
-  }
-  
-  .SupportTriangle {
-    background: url('assets/img/Relationshapes_SupportTriangle.svg');
-  }
-  
-  .TalkCircle {
-    background: url('assets/img/Relationshapes_TalkCircle.svg');
-  }
-  
-  .TalkQuartCircle {
-    background: url('assets/img/Relationshapes_TalkQuartCircle.svg');
-  }
-  
-  .TalkTriangle {
-    background: url('assets/img/Relationshapes_TalkTriangle.svg');
-  }*/
   
   #snow {
     position: relative;
@@ -532,20 +456,47 @@
     border-radius: 4px;
     letter-spacing: 0.5px;
     font-family: 'Museo Sans', sans-serif;
-    color: #2300FF;
-    border: 1px solid #2300FF;
+    color: #000;
+    border: 1px solid transparent;
     outline: none;
-    background-color: rgba(255,255,255,0.7);
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
-    padding: 6px 10px;
-    margin: 0 8px;
+    padding: 6px 0px;
+    background: transparent;
+/*    margin: 0 8px;*/
     font-weight: 500;
+    position: absolute;
+    top: 65px;
+    right: 30px;
+  }
+
+  .form {
     position: absolute;
     top: 30px;
     right: 30px;
   }
+
+  .form button,  .form input{
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    font-family: 'Museo Sans', sans-serif;
+    color: #000;
+    border: 1px solid #000;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 6px 10px;
+    margin-right: 2px;
+/*    margin: 0 8px;*/
+    font-weight: 500;
+    background: transparent;
+  }
+  .form input {
+    width: 70px;
+  }
+
   </style>
 </head>
 
@@ -587,23 +538,26 @@
     <source src="assets/sounds/soundtrack.mp3" type="audio/mpeg" id="audiofile">
   </audio>
   <button id="play" onclick="playAudio();">
-    Music ON
+    ▸ Music ON
   </button>
+  <form class='form'>
+    <input id='input' type='number' /> slots
+  </form>
   <div id="container">
     <div>
       <p style='margin-top: 0px'>
-        <input type="button" value="Start Wheeling" class='btn1' onClick="loopStart();">
+        <input type="button" value="1. Start Wheeling" class='btn1' onClick="loopStart();">
         <!--         <input type="button" value="Stop Wheeling" onClick="loopStop()"> -->
-        <input type="button" value="Pick One!" class='btn2' onClick="QuickPick()">
+        <input type="button" value="2. Pick One!" class='btn2' onClick="QuickPick()">
         <!--         <input type="button" value="Quick Pick!" onClick="addNr()"> -->
-        <input type="button" value="Add to List" class='btn3' onClick="addNr()">
+        <input type="button" value="3. Add to List" class='btn3' onClick="addNr()">
       </p>
       <div id="wrapPicks">
         <span id="wrapNr">00</span>
       </div>
       <h2> Congrats! </h2>
       <textarea id="myPicks" name="myPicks" rows="3"></textarea>
-      <div class='clear' style='margin: 20px 0;'>
+      <div class='clear'>
         <input type="button" value="Copy All" onClick="copyQP()">
         <input type="button" value="Clear All" onClick="resetNrs()">
       </div>
@@ -612,9 +566,9 @@
   <script src="assets/js/jquery.min.js"></script>
   <script>
   var lotto_nrs_drawn = 1; // numbers to be drawn...
-  var lotto_pool = 150; // ...from a pool of
+  var lotto_pool = 100; // ...from a pool of
   var repeat_num = 0; // allow repeating numbers per combination (0 = no; 1 = yes;)
-
+  document.getElementById("input").value = lotto_pool;
   var lotto_nrs_special = 0; //special ball scope 1 to x; 0 if none
   var lotto_pool_special_different = 1; // 1 = yes; 0 = no; Is the special ball a separate draw?
 
@@ -628,6 +582,17 @@
   var specialNr = '';
   var qps = new Array(lotto_nrs_drawn);
   var loop_x = 0;
+
+
+  function lotto_pool_def() {
+    var input = document.getElementById("input").value;
+    if (input == '') {
+      lotto_pool = 100;
+    }else {
+      lotto_pool = input;
+    }
+  }
+
 
   function wheelNrs() {
     qps = [];
@@ -672,6 +637,7 @@
 
 
   function loopStart() {
+    lotto_pool_def();
     loop_x = 0;
     loopDo();
   }
@@ -766,10 +732,10 @@
         // Tests the paused attribute and set state. 
         if (oAudio.paused) {
           oAudio.play();
-          btn.textContent = "Music OFF";
+          btn.textContent = "■ Music OFF";
         } else {
           oAudio.pause();
-          btn.textContent = "Music ON";
+          btn.textContent = "▸ Music ON";
         }
       } catch (e) {
         // Fail silently but show in F12 developer tools console
